@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+printf "$1\n";
+for j in `fdisk -l $1 | grep $1"[[:digit:]]" | awk {'print $1'}`
+do 
+    k=`fdisk -l $j|grep -i Disk| awk {'print $3,$4'}|cut -d"," -f1`;
+    printf "\t \------ $j  $k\n";
+done
