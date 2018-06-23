@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+read -sp "Enter name:" name
+echo -e "\n$name"

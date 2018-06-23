@@ -1,0 +1,18 @@
+#!/bin/env python
+
+import json
+import requests
+from argparse import ArgumentParser
+
+parser=ArgumentParser(description='Gather Quandl data')
+parser.add_argument('url',help='Get the Quandl URL')
+parser.add_argument('filename',help='File name to output the contents')
+
+
+args=parser.parse_args()
+
+req=requests.get(args.url)
+
+
+with open("/home/user/Dropbox/%s.json"%args.filename,"w") as f:
+    json.dump(req.json(),f)
