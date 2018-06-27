@@ -1,0 +1,19 @@
+[/vol/Amazon - Directory (inum 64)]
+  Security style: NTFS
+  Effective style: NTFS
+
+  DOS attributes: 0x0030 (---AD---)
+
+  Unix security:
+    uid: 0 (root)
+    gid: 0
+    mode: 0777 (rwxrwxrwx)
+
+  NTFS security descriptor:
+    Owner: BUILTIN\Administrators
+    Group: BUILTIN\Administrators
+    DACL:
+      Allow - JDNET\g90_jdshare_amazon_r - 0x001200a9 (Read and Execute) - OI|CI
+      Allow - JDNET\g90_jdshare_amazon_w - 0x001301bf (Modify) - OI|CI
+      Allow - JDNET\GIS_SecurityAdmins - 0x001f01ff (Full Control) - OI|CI
+      Allow - BUILTIN\Administrators - 0x001f01ff (Full Control) - OI|CI
